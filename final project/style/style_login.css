@@ -1,0 +1,124 @@
+body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    min-height: 680px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+header {
+    width: 100%;
+    flex: 0 1 100px;
+    max-height: 100px;
+    background-color:  rgb(202, 172, 128);
+    border: 2px solid bisque;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+main{
+    width: 100%;
+    flex: 1 2 ;
+    background-color: rgba(240, 248, 255, 0.845);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+footer{
+    width: 100%;
+    flex: 0.5 1 60px;
+    max-height: 100px;
+    background-color: bisque;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.login{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgb(244, 215, 171);
+    box-shadow: 0 5px 15px rgba(0,0,0,1);
+    text-align: center;
+    max-width: 350px;
+    flex: 2 2 60px;
+    
+}
+
+.login button,input{
+    width: 200px;
+    padding: 10px;
+    margin: 10px 0;
+    
+}
+
+.login button{
+    background-color: rgb(114, 70, 5);
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: medium;
+    font-weight: bold;
+}
+.login button:hover{
+    background-color: rgb(244, 215, 171);
+}
+.right_side{
+    display: none;
+    
+}
+.right_side a{
+    flex: 1;
+    text-align: center;
+    padding-top: 30px;
+    background-color: antiquewhite;
+    color: #000;
+    border-top: 2px solid #000;
+    font-size: 25px;  
+}
+.right_side.active{
+/* display: flex; */
+/* flex-direction: column; */
+position: fixed;
+width: 250px;
+height: 100vh;
+top: 0;
+left: 0;
+z-index: 1000;
+ background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;;
+
+}
+
+@media (max-width:575px) {
+    
+    body, html{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-items: space-between;
+
+    }
+    .login{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 400px;
+        flex: 1 2 ;
+        font-size: 30px;
+    }
+    header, footer{
+        flex:0.5 1 100px;
+    }
+}
